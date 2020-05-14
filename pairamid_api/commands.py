@@ -40,28 +40,17 @@ def add_users():
         print('Database base has already been seeded.')
         return None
 
-    eo = User(username='eo', role='HOME')
-    nh = User(username='nh', role='HOME')
-    jh = User(username='jh', role='HOME')
-    ms = User(username='ms', role='HOME')
-    es = User(username='es', role='HOME')
-    kd = User(username='kd', role='HOME')
-    mj = User(username='mj', role='HOME')
-    jw = User(username='jw', role='HOME')
-    ar = User(username='ar', role='HOME')
+    ya = User(username='ya', role='DEV')
+    kl = User(username='kl', role='DEV')
+    cb = User(username='cb', role='DEV')
+    tf = User(username='tf', role='QA')
+    ps = User(username='ps', role='DE')
+    jc = User(username='jc', role='QA')
+    bd = User(username='bd', role='UX')
 
-    cd = User(username='cd', role='VISITOR')
-    tp = User(username='tp', role='VISITOR')
-    mr = User(username='mr', role='VISITOR')
-    rp = User(username='rp', role='VISITOR')
-    rj = User(username='rj', role='VISITOR')
-    jl = User(username='jl', role='VISITOR')
-    cp = User(username='cp', role='VISITOR')
+    home = [ya, kl, cb, tf, ps, jc, bd]
 
-    home = [eo, nh, jh, ms, es, kd, mj, jw, ar]
-    visitor = [cd, tp, mr, rp, rj, jl, cp]
-
-    for user in home + visitor:
+    for user in home:
         db.session.add(user)
 
     db.session.commit()
